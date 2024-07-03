@@ -1,7 +1,8 @@
 {
   "name": "motion-cipher",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "homepage": "https://skylerriggle.github.io/MotionCipher/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",

@@ -1,10 +1,10 @@
 from math import sqrt, pow;
 from src.math.transform import Transform;
 
-EVENT_NONE: int;
-EVENT_PRESS: int;
-EVENT_HELD: int;
-EVENT_RELEASE: int;
+EVENT_NONE: int = 0;
+EVENT_PRESS: int = 1;
+EVENT_HELD: int = 2;
+EVENT_RELEASE: int = 3;
 
 def LabelTransforms(transforms: list[Transform]) -> list[int]:
     labels: list[int] = [];
@@ -20,7 +20,7 @@ def LabelTransforms(transforms: list[Transform]) -> list[int]:
     for transform in transforms:
         stdDev += pow(transform.pullDistance - avg, 2);
     stdDev = avg - sqrt(stdDev / len(transforms));
-    
+
     prevLabel: int = EVENT_NONE;
     for transform in transforms:
         belowDev: bool = transform.pullDistance < stdDev;

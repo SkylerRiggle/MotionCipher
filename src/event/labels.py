@@ -19,7 +19,7 @@ def LabelTransforms(transforms: list[Transform]) -> list[int]:
     stdDev: float = 0.0;
     for transform in transforms:
         stdDev += pow(transform.pullDistance - avg, 2);
-    stdDev = avg - sqrt(stdDev / len(transforms));
+    stdDev = avg - 2*sqrt(stdDev / len(transforms));
 
     prevLabel: int = EVENT_NONE;
     for transform in transforms:

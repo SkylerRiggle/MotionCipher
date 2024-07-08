@@ -6,20 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>MotionCipher</title>
 
-    <link rel="stylesheet" href="https://pyscript.net/releases/2022.12.1/pyscript.css" />
-    <script defer src="https://pyscript.net/releases/2022.12.1/pyscript.js"></script>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
   </head>
 
   <body>
     <h1>MotionCipher</h1>
     <form>
-
+      
     </form>
 
-    <py-config>
-      packages = ["cv2", "time", "mediapipe", "math"]
-    </py-config>
-    <py-script src="./src/web_control.py"></py-script>
+    <script type="py" src="./src/web_control.py" config="./py_config.toml"></script>
   </body>
 
 </html>
